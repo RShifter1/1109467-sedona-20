@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Mark Shervud](https://up.htmlacademy.ru/adaptive/20/user/1109467).
-* Наставник: [Егор Глебов](https://htmlacademy.ru/profile/beast)..
+* Наставник: [Егор Глебов](https://htmlacademy.ru/profile/beast).
 
 ---
 
