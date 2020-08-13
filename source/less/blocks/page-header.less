@@ -1,0 +1,67 @@
+
+.page-header {
+  position: relative;
+ background-color: var(--basic-white);
+}
+
+.main-nav::before {
+  content: "";
+  background-image: url("../../img/icon-cross1.svg");
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  // background-color: var(--basic-white);
+}
+
+  .main-nav__toggle {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: 0;
+  fill: var(--basic-blue);
+
+&:hover,
+&:focus {
+  fill: black;
+  outline: none;
+}
+
+
+}
+
+
+
+
+
+
+
+.site-list__item {
+  background-color: var(--basic-blue);
+  display: grid;
+  grid-template-columns: auto;
+  // column-gap: 200px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  mix-blend-mode: normal;
+  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
+  line-height: 40px;
+  font-weight: bold;
+  color: var(--basic-white);
+  text-align: center;
+
+
+
+}
+
+.header__logo {
+  font-size: 0;
+  margin-left: 100px;
+}
