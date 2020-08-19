@@ -1,5 +1,19 @@
 .page-footer {
+  display: block;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+
+@media (min-width: @desktop-width) {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 40px;
+}
 }
 
 .insta {
@@ -7,22 +21,34 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+
+  text-align: center;
+  display: block;
 }
 
 .footer-social {
-  outline: 5px solid black;
-  padding: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
 }
 
-.social-button {
-  font-size: 0;
-  fill: var(--basic-white);
-  padding-top: 25px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
 
+.social-button {
+  fill: var(--basic-white);
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
   background-color: var(--basic-blue);
+  color: inherit;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .copyright a {

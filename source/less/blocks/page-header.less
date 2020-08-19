@@ -5,17 +5,26 @@
 }
 
 .main-nav::before {
-  content: "";
-  background-image: url("../../img/icon-cross1.svg");
+  content: url("../../img/icon-cross1.svg");
   width: 22px;
   height: 22px;
   position: absolute;
   right: 5px;
   top: 8px;
-  // background-color: var(--basic-white);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
-  .main-nav__toggle {
+
+
+
+
+
+
+
+.main-nav__toggle {
   position: absolute;
   top: 170px;
   right: 0;
@@ -29,18 +38,49 @@
   font-size: 0;
   fill: var(--basic-blue);
 
-&:hover,
-&:focus {
-  fill: black;
-  outline: none;
+  &:hover,
+  &:focus {
+    fill: black;
+    outline: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav {
+  outline: 5px solid red;
 }
 
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(min-content, 100px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 100px);
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    font-weight: bold;
+    color: black;
+
+    // text-align: left;
+  }
 }
 
+@media (min-width: @desktop-width){
+  .main-nav {
+    display: grid;
+    grid-template-columns: minmax(min-content, 228px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 226px);
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    font-weight: bold;
+    text-align: left;
 
-
-
+  }
+}
 
 
 
@@ -50,6 +90,9 @@
   grid-template-columns: auto;
   // column-gap: 200px;
   border-bottom: 1px solid rgba(0,0,0,0.2);
+  outline: none;
+  border: none;
+
   mix-blend-mode: normal;
   box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
   line-height: 40px;
@@ -57,11 +100,30 @@
   color: var(--basic-white);
   text-align: center;
 
-
-
+  @media (min-width: @tablet-width){
+      color: var(--basic-black);
+      background-color: var(--basic-white);
+    }
 }
 
+
 .header__logo {
+  background-image: url("../../img/logo-sedona-mobile.svg");
   font-size: 0;
-  margin-left: 100px;
+  // margin-left: 30px;
+  position: absolute;
+  left: 50%;
+outline: 5px solid red;
+  top: 0;
+  width: 100px;
+  height: 84px;
+
+  transform: translate(-50%);
+
+  @media (min-width: @desktop-width) {
+      background-image: url("../../img/logo-sedona-desktop.svg");
+      width: 190px;
+      height: 100px;
+      background-repeat: no-repeat;
+  }
 }

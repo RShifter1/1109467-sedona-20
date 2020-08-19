@@ -23,6 +23,12 @@
   --rate-wrapper: #666666;
 }
 
+// Viewports
+
+@tablet-width: 768px;
+@desktop-width: 1280px;
+@mobile-width: 320px;
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -35,7 +41,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 18px;
-  max-width: 320px;
+  width: @desktop-width;
   text-transform: uppercase;
   // color: var(--basic-white);
 }
