@@ -6,13 +6,20 @@
   padding-left: 80px;
   padding-right: 80px;
 
+  @media(min-width: @tablet-width){
+    display: flex;
+    justify-content: space-between;
+    // outline: 5px solid red;
+  }
 
-@media (min-width: @desktop-width) {
+
+  @media (min-width: @desktop-width) {
   display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 100px;
-  padding-right: 40px;
+  // padding-left: 100px;
+  // padding-right: 40px;
+  justify-content: space-around;
 }
 }
 
@@ -24,6 +31,13 @@
 
   text-align: center;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+
+  }
+
+
 }
 
 .footer-social {
@@ -32,6 +46,10 @@
   align-items: center;
   justify-content: center;
   padding-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 

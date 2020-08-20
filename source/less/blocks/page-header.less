@@ -37,6 +37,7 @@
   border: none;
   font-size: 0;
   fill: var(--basic-blue);
+  outline: 5px solid red;
 
   &:hover,
   &:focus {
@@ -50,27 +51,19 @@
 }
 
 .main-nav {
-  outline: 5px solid red;
-}
-
-
-@media (min-width: @tablet-width) {
-  .main-nav {
+  @media (min-width: @tablet-width) {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(min-content, 100px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 100px);
+    grid-template-columns: minmax(min-content, 140px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 100px);
     font-size: 14px;
     line-height: 26px;
     color: var(--basic-black);
     font-weight: bold;
-    color: black;
-
-    // text-align: left;
+    color: var(--basic-black);
   }
-}
+
 
 @media (min-width: @desktop-width){
-  .main-nav {
     display: grid;
     grid-template-columns: minmax(min-content, 228px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 226px);
     font-size: 14px;
@@ -103,6 +96,7 @@
   @media (min-width: @tablet-width){
       color: var(--basic-black);
       background-color: var(--basic-white);
+      // outline: 5px solid red;
     }
 }
 
@@ -114,11 +108,14 @@
   position: absolute;
   left: 50%;
 outline: 5px solid red;
-  top: 0;
+  top: 170px;
   width: 100px;
   height: 84px;
-
   transform: translate(-50%);
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
 
   @media (min-width: @desktop-width) {
       background-image: url("../../img/logo-sedona-desktop.svg");
