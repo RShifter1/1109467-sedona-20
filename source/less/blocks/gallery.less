@@ -1,4 +1,249 @@
 .gallery {
-  outline: 5px solid red;
 
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+}
+
+.gallery__item {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-top: 1px solid var(--date-of-check-in-focus);
+  text-align: center;
+  margin: 0;
+  position: relative;
+
+@media (min-width: @tablet-width) {
+  padding: 0;
+  background-color: var(--form-chill);
+}
+
+@media (min-width: @desktop-width) {
+  background-color: white;
+  margin: 0;
+}
+
+}
+
+
+
+
+// .gallery__item::after {
+//   content: url("../../img/icon-like.svg");
+//   display: flex;
+//
+//
+//
+// }
+.like {
+  // outline: 5px solid red;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  }
+
+}
+.like-color {
+  fill: red;
+}
+
+.caption {
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    // height: 45px;
+    width: 100%;
+    background-color: var(--basic-black);
+    // opacity: 0.3;
+    // margin-left: 23px;
+    margin-right: 20px;
+    color: white;
+  }
+}
+
+
+.gallery__item-name {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    // opacity: 1;
+  }
+  // text-align: center;
+}
+
+.gallery__item-author {
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.gallery__item-intro {
+line-height: 24px;
+}
+
+.gallery__item-description--video {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 33px;
+
+}
+
+.gallery__item--videoblock {
+  background-color: var(--date-of-check-in-focus);
+  text-align: center;
+  padding-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    background-color: var(--basic-white);
+  }
+}
+
+.gallery__item-video {
+  padding-left: 0;
+  padding-bottom: 0px;
+  text-align: center;
+
+}
+
+.gallery__figure {
+  position: relative;
+  margin: 0 auto;
+  outline: 5px solid red;
+  // width: 320px;
+  width: 100%;
+  height:200px;
+}
+
+.gallery__figcaption {
+  position: absolute;
+bottom: 0px;
+left: 0;
+height: 45px;
+width: 85%;
+background-color: var(--basic-black);
+opacity: 0.6;
+margin-left: 23px;
+margin-right: 20px;
+
+@media (min-width: @tablet-width) {
+  width: 100%;
+  margin: 0;
+}
+}
+
+
+.range-controls {
+  position: relative;
+  margin-top: 20px;
+  left: 0;
+  top: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 2px;
+  background-color: var(--basic-white);
+  opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 100px;
+    margin-right: 160px;
+
+  }
+}
+
+.toggle::before {
+  @media (min-width: @tablet-width) {
+    content: url("../../img/icon-video-replay.svg");
+    position: absolute;
+    background-color: white;
+    right: 30px;
+    // outline: 5px solid red;
+  }
+}
+
+.toggle::after {
+  @media(min-width: @tablet-width) {
+    content: url("../../img/icon-video-subtitles.svg");
+    position: absolute;
+    background-color: white;
+    left: 400px;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 650px;
+  }
+}
+
+.range-controls::after {
+  @media(min-width: @tablet-width) {
+    content: url("../../img/icon-video-fullscreen.svg");
+    position: absolute;
+    background-color: white;
+    left: 500px;
+    top: -10px;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 750px;
+  }
+}
+
+
+ .toggle {
+  position: absolute;
+top: 15px;
+left: 20px;
+  width: 13px;
+  height: 13px;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(box-shadow-toggle);
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 80px;
+  }
+}
+
+
+.controls {
+ background-color: var(--form-chill);
+ // padding-left: 25px;
+ // padding-right: 25px;
+ // width: 270px;
+ width: 85%;
+ padding-top: 22px;
+ padding-bottom: 22px;
+ margin-top: 0px;
+ place-items: center;
+ margin: 0 auto;
+
+ @media (min-width: @tablet-width) {
+   display: none;
+ }
+}
+
+.controls__btn {
+  font-size: 0;
+  outline: none;
+  border: none;
 }

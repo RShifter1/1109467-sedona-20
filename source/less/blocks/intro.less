@@ -18,20 +18,32 @@
 .intro::before {
   content: "";
   background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-mobile.jpg");
-  background-size: contain;
+  background-size: 300px, cover, 100px;
   width: 100%;
   height: 390px;
   position:absolute;
   background-repeat: no-repeat;
-  top: 0;
+  top: 50px;
   left: 0;
   z-index: -1;
+  background-position: center, center, bottom;
   // bottom: 300px;
 
   @media (min-width: @tablet-width) {
     height: 520px;
+    background-size: 460px, cover, 100px;
+    top: 0;
   }
 }
+
+// .intro::after {
+//   content: url("../../img/bg-intro-triangle-mobile.svg");
+//   width: 100%;
+//   height: 60px;
+//   position: absolute;
+//   bottom: 0;
+//   outline: 5px solid red;
+// }
 
 .intro {
   outline: 5px solid red;
@@ -40,10 +52,9 @@
   padding-right: 15px;
   padding-top: 500px;
   padding-bottom: 10px;
-  outline: 5px solid red;
 
   @media (min-width: @tablet-width) {
-    padding-top: 400px;
+    padding-top: 600px;
     padding-left: 120px;
     padding-right: 120px;
     padding-bottom: 50px;

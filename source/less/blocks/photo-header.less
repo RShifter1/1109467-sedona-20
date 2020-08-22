@@ -1,10 +1,54 @@
+.photo-header::before {
+  content: "";
+  background: url("../../img/text-sedona.svg"), url("../../img/bg-back-mobile.jpg");
+  width: 100%;
+  height: 214px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 220px;
+  z-index: -1;
+  background-position: center, center, bottom;
+  background-size: 230px, cover;
+
+  @media (min-width: @tablet-width) {
+    background-size: 450px, cover;
+    top: 0;
+    height: 300px;
+  }
+}
+
 .photo-header {
-  outline: 5px solid red;
   text-align: center;
+  padding-top: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+
+
+@media (min-width: @tablet-width) {
+    padding-top: 330px;
+    padding-left: 155px;
+    padding-right: 155px;
+    padding-bottom: 65px;
+  }
 }
 
 .photo__titile {
   line-height: 26px;
+}
+
+.photo__title::before {
+  content: "";
+  background: url("../../img/bg-intro-triangle-mobile.svg");
+  position: absolute;
+  top: 408px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  // background-size: 57px;
+  height: 57px;
 }
 
 .photo__intro {
