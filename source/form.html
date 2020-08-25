@@ -37,16 +37,16 @@
         <h1 class="visually-hidden">Баннер</h1>
       </section> -->
 
-
+      <section class="reviews__header">
+          <b class="reviews__header-title">Оставьте свой отзыв</b>
+          <p class="reviews__header-intro">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </section>
         <section class="reviews">
-          <section class="reviews__header">
-              <b class="reviews__header-title">Оставьте свой отзыв</b>
-              <p class="reviews__header-intro">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-          </section>
+
 
           <form action="https://echo.htmlacademy.ru" method="get">
 
-          <section class="form-fieldset">
+          <section class="form-fieldset form-fieldset--introduce">
             <h2 class="form-fieldset__title">Представьтесь:</h2>
             <div class="form-field form-field--name">
               <label class="form-field__label" for="first-name">имя*:</label>
@@ -62,7 +62,7 @@
           </div>
           </section>
 
-          <section class="form-fieldset">
+          <section class="form-fieldset form-fieldset-contacts">
             <h2 class="form-fieldset__title">Контактная информация:</h2>
             <div class="form-field--contacts">
             <label class="form-field__label form-field__label--contacts" for="telephone">Контактный телефон*:</label>
@@ -85,7 +85,7 @@
           </div>
         </section>
 
-          <section class="form-fieldset">
+          <section class="form-fieldset form-fieldset--impression">
             <h2 class="form-fieldset__title">ВАше Общее впечатление:</h2>
             <div class="form-field form-field--radio">
             <input class="radio"  type="radio" id="positive" name="good-impression">
@@ -101,10 +101,10 @@
           </div>
           </section>
 
-          <section class="form-fieldset">
+          <section class="form-fieldset form-fieldset--seens">
             <h2 class="form-fieldset__title">посещенные достопримечательности:</h2>
             <div class="form-field form-field-seens">
-            <input class="checkbox" type="checkbox" id="bridge" name="bridge-of-devil">
+            <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge">
             <label for="bridge">Мост Дьявола</label>
           </div>
             <div class="form-field form-field-seens">
@@ -121,7 +121,7 @@
           </div>
           </section>
 
-            <section class="form-fieldset">
+            <section class="form-fieldset form-fieldset--text">
           <h2 class="form-fieldset__title">Опишите свои эмоции:</h2>
             <textarea class="form-fieldset__feedback" type="textarea" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
           </section>

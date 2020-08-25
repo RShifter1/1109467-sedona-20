@@ -1,11 +1,68 @@
 .reviews {
-
+display: flex;
+flex-wrap: wrap;
 }
 
 .reviews__header {
-outline: 5px solid red;
+// outline: 5px solid red;
 text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 350px;
+  padding-bottom: 15px;
+}
 
+.reviews__header::before {
+  content: "";
+  background: url("../../img/text-sedona.svg"), url("../../img/bg-back-mobile.jpg"), url("../../img/bg-intro-triangle-mobile.svg");
+  width: 100%;
+  height: 214px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 220px;
+  z-index: -1;
+  background-position: center, center, bottom;
+  background-size: 230px, cover;
+
+  @media (min-width: @tablet-width) {
+    background-size: 450px, cover;
+    top: 0;
+    height: 300px;
+  }
+}
+
+.reviews__header::after {
+  content: "";
+  background: url("../../img/bg-intro-triangle-mobile.svg");
+  position: absolute;
+  top: 409px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  // background-size: 57px;
+  height: 60px;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    background: url("../../img/bg-intro-triangle-tablet.svg");
+    position: absolute;
+    top: 244px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    // background-size: 57px;
+    height: 60px;
+    background-size: contain;
+  }
+}
+
+.reviews__header-intro {
+  font-size: 14px;
+line-height: 24px;
 }
 
 
@@ -19,5 +76,9 @@ font-size: 21px;
 line-height: 26px;
 outline: none;
 border: none;
+margin-top: 50px;
+margin-left: 20px;
+margin-right: 20px;
+width: 280px;
 
 }
