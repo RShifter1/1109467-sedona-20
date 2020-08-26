@@ -1,6 +1,22 @@
-// .reason {
-// }
+.reasons {
+  position: relative;
 
+}
+
+.reason {
+  // padding-bottom: 30px;
+}
+
+.reason__desc::after {
+  content: url("../../img/intro-triangle1.svg");
+    // background-color: var(--basic-blue);
+    position: absolute;
+    left: 0;
+    height: 37px;
+    top: -55px;
+    // outline: 5px solid red;
+    z-index: 2;
+}
 .reason {
   display: grid;
   // max-width: 256px;
@@ -10,7 +26,7 @@
 .reason--bg-blue {
   grid-template-columns: min-content;
   background-color: var(--basic-blue);
-  padding: 0;
+  // padding-bottom: 10px;
   margin: 0;
   // outline: 5px solid red;
   @media (min-width: @tablet-width){
@@ -36,6 +52,14 @@
   text-align: center;
   line-height: 26px;
   color: var(--basic-white);
+}
+
+.reason__description,
+.reason__number {
+  font-size: 14px;
+line-height: 21px;
+padding-bottom: 10px;
+margin-left: 5px;
 }
 
 .reason__desc {
@@ -64,7 +88,7 @@
   @media(min-width: @tablet-width) {
   padding-left: 48px;
   padding-right: 48px;
-  outline: 5px solid red;
+  // outline: 5px solid red;
   white-space: nowrap;
   // text-align: inherit;
 }
@@ -77,6 +101,12 @@
   text-align: center;
   line-height: 26px;
   color: var(--basic-black);
+}
+
+.reason__descriptionG,
+.reason__numberG {
+  font-size: 14px;
+line-height: 21px;
 }
 
 
@@ -92,16 +122,26 @@
   }
   // padding-left: 20px;
 
-
-
 }
+.features--white {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-right: 20px;
+}
+
+.features--bg-grey {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .features {
 
   @media (min-width: @tablet-width){
   // padding-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  outline: 5px solid red;
+  // outline: 5px solid red;
   // padding-right: 20px;
 }
 }
@@ -210,7 +250,7 @@
 
 
 .features__title {
-  // margin-left: 40px;
+  margin-left: 10px;
   @media(min-width: @tablet-width) {
     // margin-left: 80px;
 
@@ -221,6 +261,7 @@
 // }
 
 .features__descr {
+  margin-left: 47px;
   @media(min-width: @tablet-width) {
     text-align: center;
   }

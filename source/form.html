@@ -12,27 +12,24 @@
 
 <body>
   <header class="page-header">
-
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
+      <!-- <div class= "main-nav__wrapper"> -->
         <a class="site-list__item" href="index.html">Главная</a>
         <a class="site-list__item" href="photo.html">Фото и видео</a>
         <a class="site-list__item site-list__item--active">Форма отзыва</a>
         <a class="site-list__item" href="#">html academy</a>
+        <a class="header__logo">logo sedona</a>
+
+      <!-- </div> -->
+        <button class="close" type="button">Открыть меню</button>
     </nav>
-    <a class="header__logo">logo sedona
-      <!-- <img src="img/logo-sedona-mobile.svg" width="100" height="85" alt="логотип Седоны"> -->
-    </a>
-    <button class="main-nav__toggle" type="button">
-      <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
-        <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
-        <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
-    </svg>
-    Открыть меню</button>
+    <div class="header__wrapper header__wrapper--index">
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+  </div>
   </header>
 
 
-    <main>
+    <main class="main">
       <!-- <section class="main-image">
         <h1 class="visually-hidden">Баннер</h1>
       </section> -->
@@ -45,7 +42,6 @@
 
 
           <form action="https://echo.htmlacademy.ru" method="get">
-
           <section class="form-fieldset form-fieldset--introduce">
             <h2 class="form-fieldset__title">Представьтесь:</h2>
             <div class="form-field form-field--name">
@@ -62,8 +58,10 @@
           </div>
           </section>
 
-          <section class="form-fieldset form-fieldset-contacts">
-            <h2 class="form-fieldset__title">Контактная информация:</h2>
+
+
+          <section class="form-fieldset form-fieldset--contacts">
+            <h2 class="form-fieldset__title form-fieldset__title--contacts">Контактная информация:</h2>
             <div class="form-field--contacts">
             <label class="form-field__label form-field__label--contacts" for="telephone">Контактный телефон*:</label>
             <div class="input-icon">
@@ -102,27 +100,29 @@
           </section>
 
           <section class="form-fieldset form-fieldset--seens">
-            <h2 class="form-fieldset__title">посещенные достопримечательности:</h2>
-            <div class="form-field form-field-seens">
+            <h2 class="form-fieldset__title form-fieldset__title--seens">посещенные<br> достопримечательности:</h2>
+            <div class="seens-wrapper">
+            <div class="form-field form-field--seens">
             <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge">
             <label for="bridge">Мост Дьявола</label>
           </div>
-            <div class="form-field form-field-seens">
+            <div class="form-field form-field--seens">
             <input class="checkbox" type="checkbox" id="mountain" name="bell-mountain">
             <label for="mountain">Гора-Колокол</label>
           </div>
-          <div class="form-field form-field-seens">
+          <div class="form-field form-field--seens">
             <input class="checkbox" type="checkbox" id="park" name="slide-park">
             <label for="park">Слайд-парк</label>
           </div>
-          <div class="form-field form-field-seens">
+          <div class="form-field form-field--seens">
             <input class="checkbox" type="checkbox" id="rocks" name="red-rocks">
             <label for="rocks">Красные скалы</label>
           </div>
+        </div>
           </section>
 
             <section class="form-fieldset form-fieldset--text">
-          <h2 class="form-fieldset__title">Опишите свои эмоции:</h2>
+          <h2 class="form-fieldset__title form-fieldset__title--text">Опишите свои эмоции:</h2>
             <textarea class="form-fieldset__feedback" type="textarea" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
           </section>
           <button class="reviews__button button" type="submit">отправить отзыв</button>

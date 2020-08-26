@@ -13,22 +13,19 @@
 <body>
   <header class="page-header">
 
-    <nav class="main-nav main-nav--closed main-nav--opened">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="site-list__item site-list__item--active">Главная</a>
         <a class="site-list__item" href="photo.html">Фото и видео</a>
         <a class="site-list__item" href="form.html">Форма отзыва</a>
         <a class="site-list__item" href="#">html academy</a>
+        <a class="header__logo">logo sedona</a>
+        <button class="close" type="button">Открыть меню</button>
+
     </nav>
-    <a class="header__logo">logo sedona
-      <!-- <img src="img/logo-sedona-mobile.svg" width="100" height="85" alt="логотип Седоны"> -->
-    </a>
-    <button class="main-nav__toggle" type="button">
-      <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.9 0H0V4H22.9V0Z" fill="#81B3D2"/>
-        <path d="M22.9 9H0V13H22.9V9Z" fill="#81B3D2"/>
-        <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
-    </svg>
-    Открыть меню</button>
+    <div class="header__wrapper">
+
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+  </div>
   </header>
 
 
@@ -40,7 +37,7 @@
       </section> -->
 
       <div class="intro">
-        <b class="intro__title">седона — небольшой городок в аризоне,<br> заслуживающий большего!</b>
+        <p class="intro__title">седона — небольшой городок в аризоне, заслуживающий большего!</p>
         <p class="intro__describe">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
       </div>
       <section class="reasons">
@@ -144,6 +141,31 @@
 
     </footer>
 
+
+
+     <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      var navCross = document.querySelector('.close');
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+
+      });
+      navCross.addEventListener('click', function(){
+      if(navMain.classList.contains('main-nav--opened')) {
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+      }
+    });
+    </script>
     </body>
 
     </html>
