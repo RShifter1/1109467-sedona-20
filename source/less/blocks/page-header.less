@@ -6,7 +6,7 @@
 
 .main-nav {
   position: relative;
-  outline: 5px solid red;
+  // outline: 5px solid red;
 }
 
 .header__wrapper {
@@ -37,6 +37,7 @@
 
   @media (min-width: @tablet-width) {
     // bottom: 300px;
+    background-image:  url("../../img/logo-sedona-tablet.svg");
     top: 0;
     left: 50%;
       // left: 500%;
@@ -106,7 +107,8 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(min-content, 140px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 100px);
+    // grid-template-columns: minmax(min-content, 140px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 140px);
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     font-size: 14px;
     line-height: 26px;
     color: var(--basic-black);
@@ -179,6 +181,10 @@
   &:hover,
   &:focus {
     opacity: 0.6;
+  }
+
+  @media(min-width: @tablet-width) {
+    display: none;
   }
 }
 
