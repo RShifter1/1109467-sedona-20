@@ -1,0 +1,48 @@
+.book {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  // outline: 5px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 370px;
+    padding-right: 370px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+}
+
+
+.btn {
+  display: block;
+  background-color: var(--basic-blue);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: var(--basic-white);
+  font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+width: 100%;
+margin-top: 0;
+}
+
+.book__description {
+  margin-bottom: 25px;
+  font-size: 14px;
+line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .book__title {
+    font-size: 30px;
+
+  }
+}
