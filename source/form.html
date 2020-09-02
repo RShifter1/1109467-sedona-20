@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <div class="container">
   <header class="page-header">
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <!-- <div class= "main-nav__wrapper"> -->
@@ -18,11 +19,15 @@
         <a class="site-list__item" href="photo.html">Фото и видео</a>
         <a class="site-list__item site-list__item--active">Форма отзыва</a>
         <a class="site-list__item" href="#">html academy</a>
-        <a class="header__logo">logo sedona</a>
-
-      <!-- </div> -->
-        <button class="close" type="button">Открыть меню</button>
     </nav>
+    <button class="close" type="button">Открыть меню</button>
+    <a class="header__logo"> logo sedona
+      <picture>
+        <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img src="img/logo-sedona-mobile.svg" width="83" height="100" alt="логотип Седоны">
+   </picture>
+        </a>
     <div class="header__wrapper header__wrapper--index">
     <button class="main-nav__toggle" type="button">Открыть меню</button>
   </div>
@@ -50,7 +55,7 @@
           </div>
           <div class="form-field form-field--name">
             <label class="form-field__label" for="second-name">Фамилия*:</label>
-            <input class="form-field__input"type="text" id="second-name" name="second-names" placeholder="Иванов" required>
+            <input class="form-field__input" type="text" id="second-name" name="second-names" placeholder="Иванов" required>
           </div>
           <div class="form-field form-field--name">
             <label class="form-field__label" for="middle-name">отчество:</label>
@@ -86,38 +91,39 @@
 
         </section>
 
+
           <section class="form-fieldset form-fieldset--impression">
             <h2 class="form-fieldset__title">ВАше Общее впечатление:</h2>
             <div class="form-field form-field--radio">
-            <input class="radio"  type="radio" id="positive" name="good-impression">
+            <input class="radio"  type="radio" id="positive" name="impression" value="positive">
             <label class="form-field--radio__label" for="positive">Скорее положительное</label>
           </div>
             <div class="form-field form-field--radio">
-            <input  class="radio" type="radio" id="negative" name="bad-impression">
+            <input  class="radio" type="radio" id="negative" name="impression" value="negative">
             <label class="form-field--radio__label" for="negative">Скорее отрицательное</label>
           </div>
           <div class="form-field form-field--radio">
-            <input class="radio"  type="radio" id="idk" name="idk-impression">
+            <input class="radio"  type="radio" id="idk" name="impression" value="idk">
             <label class="form-field--radio__label" for="idk">Затрудняюсь ответить</label>
           </div>
           </section>
 
-          <section class="form-fieldset form-fieldset--seens">
-            <h2 class="form-fieldset__title form-fieldset__title--seens">посещенные<br> достопримечательности:</h2>
-            <div class="seens-wrapper">
-            <div class="form-field form-field--seens">
+          <section class="form-fieldset form-fieldset--sights">
+            <h2 class="form-fieldset__title form-fieldset__title--sights">посещенные<br> достопримечательности:</h2>
+            <div class="sights-wrapper">
+            <div class="form-field form-field--sights">
             <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge">
             <label for="bridge">Мост Дьявола</label>
           </div>
-            <div class="form-field form-field--seens">
+            <div class="form-field form-field--sights">
             <input class="checkbox" type="checkbox" id="mountain" name="bell-mountain">
             <label for="mountain">Гора-Колокол</label>
           </div>
-          <div class="form-field form-field--seens">
+          <div class="form-field form-field--sights">
             <input class="checkbox" type="checkbox" id="park" name="slide-park">
             <label for="park">Слайд-парк</label>
           </div>
-          <div class="form-field form-field--seens">
+          <div class="form-field form-field--sights">
             <input class="checkbox" type="checkbox" id="rocks" name="red-rocks">
             <label for="rocks">Красные скалы</label>
           </div>
@@ -126,7 +132,7 @@
 
             <section class="form-fieldset form-fieldset--text">
           <h2 class="form-fieldset__title form-fieldset__title--text">Опишите свои эмоции:</h2>
-            <textarea class="form-fieldset__feedback" type="textarea" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="form-fieldset__feedback" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
           </section>
           <button class="reviews__button button" type="submit">отправить отзыв</button>
           <small class="reviews__legend">
@@ -136,7 +142,7 @@
         </section>
 </main>
         <footer class="page-footer">
-            <a class="insta" href="#">#VISITSEDONA</a>
+            <a class="instagram" href="#">#VISITSEDONA</a>
           <div class="footer-social">
                 <a class="social-button" href="#">twitter
                   <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
@@ -158,18 +164,19 @@
                   </svg>
                 </a>
           </div>
-        <div class="copyright">
-            <p class="copyright__description">Разработано <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-                <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
-              </svg>
-         HTML Academy
-            </a></p>
-        </div>
+          <div class="copyright">
+              <p class="copyright__description">Разработано </p>
+              <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                  <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+                </svg>
+           HTML Academy
+              </a>
+          </div>
 
 
         </footer>
-
+</div>
         </body>
 
         </html>
