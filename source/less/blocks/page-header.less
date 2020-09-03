@@ -67,6 +67,8 @@
   }
 }
 
+
+
 .main-nav__toggle {
   position: absolute;
   top: 20px;
@@ -101,13 +103,12 @@
 .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 10px;
+  bottom: 62px;
+  right: 18px;
   width: 23px;
   height: 4px;
   background-color: var(--basic-blue);
   box-shadow: 0 8px 0 0 var(--basic-blue), 0 16px 0 0 var(--basic-blue);
-
 
 
 }
@@ -118,63 +119,85 @@
   outline: none;
 }
 
+.main-nav__toggle:active::before {
+  opacity: 0.3;
+  outline: none;
+}
 
 .main-nav {
   @media (min-width: @tablet-width) {
     width: 100%;
     display: grid;
-    // grid-template-columns: minmax(min-content, 140px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 140px);
+    // grid-template-columns: minmax(min-content, 0.5) minmax(min-content, 200px) minmax(min-content, 1.5fr) minmax(min-content, 180px);
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    // margin-left: 10px;
-
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // margin-right: 15px;
+    // margin-left: 15px;
+    place-items: center;
+    grid-gap: 0px;
   }
 
 
 @media (min-width: @desktop-width){
     display: grid;
-    grid-template-columns: minmax(min-content, 228px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 226px);
-    font-size: 14px;
-    line-height: 26px;
-    color: var(--basic-black);
-    font-weight: bold;
-    text-align: left;
-    padding-left: 0;
+    grid-template-columns: minmax(min-content, 0.5fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 0.5fr);
+    // padding-left: 10px;
+    // padding-right: 10px;
+    // gap: 30px;
   }
 }
 
 
 .main-nav .site-list__item {
+@media (max-width: @mobile-width-only){
   display: grid;
   color: var(--basic-white);
   background-color: var(--basic-blue);
-  grid-template-columns: auto;
-  // column-gap: 200px;
   border-bottom: 1px solid rgba(0,0,0,0.2);
-
-  // position: absolute;
   mix-blend-mode: normal;
-  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
+  place-items: center;
   line-height: 40px;
   font-weight: bold;
-
+  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  // padding-bottom: 15px;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom:3px;
   // outline: 5px solid red;
+ &:focus,
+ &:hover {
+   background-color: var(--extra-blue);
+ }
 
+ &:active {
+   background-color: var(--dark-blue);
+ }
+}
 
   @media (min-width: @tablet-width){
       background-color: var(--basic-white);
       outline: none;
       border: none;
       font-size: 14px;
-line-height: 26px;
+      line-height: 26px;
+      font-weight: bold;
       box-shadow: none;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-right: 10px;
-      // padding-left: 30px;
       color: var(--basic-black);
-    }
 
+        &:hover,
+        &:focus
+        {
+          color: var(--basic-blue);
+        }
+
+        &:active {
+          color: rgba(0,0,0,0.3);
+        }
+      }
+
+      @media (min-width: @desktop-width){
+      }
 }
 
 .close {
@@ -183,10 +206,11 @@ line-height: 26px;
   height: 22px;
   width: 22px;
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 18px;
+  top: 15px;
   padding: 0;
   outline: none;
+  // outline: 5px solid red;
   border: none;
   cursor: pointer;
   &:active {
@@ -197,6 +221,10 @@ line-height: 26px;
   &:hover,
   &:focus {
     opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media(min-width: @tablet-width) {
@@ -217,19 +245,30 @@ line-height: 26px;
 
     .main-nav--nojs .site-list__item {
       position: static;
-      background-color: var(--basic-blue);
+      @media (max-width: @mobile-width-only){
       display: grid;
-      grid-template-columns: auto;
-      // column-gap: 200px;
+      color: var(--basic-white);
+      background-color: var(--basic-blue);
       border-bottom: 1px solid rgba(0,0,0,0.2);
-
-      // position: absolute;
       mix-blend-mode: normal;
-      box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
+      place-items: center;
       line-height: 40px;
       font-weight: bold;
-      color: var(--basic-white);
+      box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+      // padding-bottom: 15px;
       text-align: center;
+      padding-top: 5px;
+      padding-bottom: 8px;
+      // outline: 5px solid red;
+     &:focus,
+     &:hover {
+       background-color: var(--extra-blue);
+     }
+
+     &:active {
+       background-color: var(--dark-blue);
+     }
+    }
     }
 
 }

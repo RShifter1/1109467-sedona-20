@@ -58,11 +58,23 @@ line-height: 26px;
   margin-left: 10px;
   margin-bottom: 20px;
   // outline: 5px solid red;
-  height: 60px;
+  height: 56px;
   // flex-grow: 2;
   width: 100%;
   // flex-wrap: wrap;
   position: relative;
+  border: 4px solid transparent;
+
+  &:focus,
+  &:hover {
+    background-color: var(--date-of-check-in-focus);
+    border: 4px solid transparent;
+  }
+
+  &:active {
+    background-color: var(--basic-white);
+    border: 4px solid var(--date-of-check-in-focus);
+  }
 
   @media(min-width: @tablet-width) {
     // margin-bottom: 30px;
@@ -78,7 +90,7 @@ line-height: 26px;
 
 .form-field__icon {
   width: 18px;
-  height: 12px;
+  height: 20px;
   background-color: var(--icon-grey);;
   padding: 25px;
   // height: 60px;
@@ -224,6 +236,20 @@ justify-content: space-between;
 	border: 5px solid var(--form-chill);
 	border-radius: 50%;
 	background: var(--form-chill);
+
+}
+
+.radio + label:hover::before,
+.radio + label:focus::before {
+  border: 5px solid var(--date-of-check-in-focus);
+  background: var(--date-of-check-in-focus);
+}
+
+.radio + label:active::before {
+
+  background: #D5D5D5;
+  mix-blend-mode: normal;
+  border: 5px solid #D5D5D5;
 }
 .radio + label:after {
 	content: '';
@@ -275,6 +301,8 @@ text-align: center;
 line-height: 26px;
 
 }
+
+
 .checkbox + label:before {
 	content: '';
 	position: absolute;
@@ -287,7 +315,20 @@ line-height: 26px;
 	transition: .2s;
 
 }
-.checkbox + label:after {
+
+.checkbox + label:hover::before,
+.checkbox + label:focus::before {
+
+  background: var(--date-of-check-in-focus);
+}
+
+.checkbox + label:active::before {
+
+  background: #D5D5D5;
+  mix-blend-mode: normal;
+
+}
+.checkbox + label::after {
 	content: '';
 	position: absolute;
 	top: 16px;
@@ -301,8 +342,18 @@ line-height: 26px;
 
 }
 
+.checkbox + label:active::before
+
+{
+  background: #333333;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+
+}
+
 .checkbox:checked + label:after {
 	opacity: 1;
+
 }
 
 .sights-wrapper {

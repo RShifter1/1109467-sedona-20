@@ -20,19 +20,44 @@
   background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-mobile.jpg");
   background-size: 300px, cover, 100px;
   width: 100%;
-  height: 390px;
+  height: 380px;
   position:absolute;
   background-repeat: no-repeat;
   top: 0px;
   left: 0;
   z-index: -1;
-  background-position: center, center, bottom;
+  background-position: center, center;
+
+  @media (min-resolution: 2dppx) {
+      background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-mobile@2x.jpg");
+      background-size: 300px, cover, 100px;
+      width: 100%;
+      height: 380px;
+      position:absolute;
+      background-repeat: no-repeat;
+      top: 0px;
+      left: 0;
+      z-index: -1;
+      background-position: center, center;
+    }
   // bottom: 300px;
 
   @media (min-width: @tablet-width) {
+    background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-tablet@1x.jpg");
     height: 520px;
-    background-size: 460px, cover;
-    top: 0;
+    background-size: 480px, cover;
+    // top: 10px;
+    background-position: center, center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+        background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-tablet@2x.jpg");
+        height: 520px;
+        background-size: 480px, cover;
+        // top: 10px;
+        background-position: center, center;
+        background-repeat: no-repeat;
+      }
   }
 
 }
@@ -47,7 +72,7 @@
   background-size: contain;
   // bottom: 100px;
   left: 0;
-  top: 366px;
+  top: 355px;
   // outline: 5px solid red;
 
   @media (min-width: @tablet-width) {
@@ -68,37 +93,42 @@ background-size: cover;
   text-align: center;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 420px;
-  padding-bottom: 15px;
+  padding-top: 396px;
+  padding-bottom: 35px;
   font-size: 18px;
 line-height: 26px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 550px;
+    padding-top: 540px;
     padding-left: 120px;
     padding-right: 120px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 600px;
+    padding-top: 550px;
     padding-left: 360px;
     padding-right: 360px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
 .intro__title {
   //
-
+  font-size: 18px;
+  line-height: 26px;
   font-weight: bold;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+  font-size: 21px;
+  line-height: 26px;
+}
 }
 
 .intro__describe {
   font-size: 14px;
   line-height: 26px;
-  // padding-left: 0px;
-  // padding-right: 0px;
   @media (min-width: @tablet-width) {
     // outline: 5px solid black;
     white-space: nowrap;
