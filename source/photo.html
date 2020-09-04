@@ -24,7 +24,7 @@
   <picture>
     <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
     <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-    <img src="img/logo-sedona-mobile.svg" width="83" height="100" alt="логотип Седоны">
+    <img src="img/logo-sedona-mobile.svg" alt="логотип Седоны">
 </picture>
     </a>
     <div class="header__wrapper">
@@ -42,14 +42,13 @@
 
 
 <section class="gallery">
-  <section class="gallery__item">
-    <div class="picture__wrapper">
+  <section class="gallery__item gallery__item--big">
+
     <picture>
-      <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg">
-      <source media="(min-width: 1280px)"srcset="img/photo-sunset-desktop@1x.jpg">
-      <img class="gallery__photo" src="img/main-bridge-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
+      <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+      <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+      <img class="gallery__photo gallery__photo--desktop" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы">
     </picture>
-  </div>
     <div class="caption">
     <h3 class="gallery__item-name">неродные просторы</h3>
     <p class="gallery__item-author">Автор фото: Борис</p>
@@ -67,9 +66,9 @@
 
   <section class="gallery__item">
     <picture>
-      <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg">
-      <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg">
-    <img class="gallery__photo" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
+      <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+    <img class="gallery__photo" src="img/photo-cactus-mobile@1x.jpg"  srcset="img/photo-cactus-mobile@2x.jpg" alt="Местная растительность">
   </picture>
     <div class="caption">
     <h3 class="gallery__item-name">Местная растительность</h3>
@@ -88,9 +87,9 @@
 
   <section class="gallery__item">
     <picture>
-      <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg">
-      <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg">
-    <img class="gallery__photo" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
+      <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x,img/photo-roads-tablet@2x.jpg 2x">
+    <img class="gallery__photo" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" alt="Дорога на север">
   </picture>
     <div class="caption">
     <h3 class="gallery__item-name">Дорога на север</h3>
@@ -109,9 +108,9 @@
 
 <section class="gallery__item">
   <picture>
-    <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg">
-  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg">
-    <img class="gallery__photo" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
+    <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+    <img class="gallery__photo" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" alt="Мост дьявола">
   </picture>
     <div class="caption">
     <h3 class="gallery__item-name">Мост дьявола</h3>
@@ -133,17 +132,17 @@
     <p class="gallery__item-description--video">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     <!-- <img src="img/photo-bridge-mobile@1x.jpg" width="280" heigh="280" alt="Мост дьявола"> -->
     <section class="gallery__figure">
+      <div class="video__wrapper">
       <picture>
-        <source media="(min-width: 1280px)" srcset="img/video-desktop@1x.jpg">
-          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
-      <!-- <video class="gallery__item-video" controls preload="metadata" width="320" height="200"></video> -->
-      <img class="gallery__item-video" src="img/video-mobile@1x.jpg" width="800" height="200" alt="видео">
+        <source media="(min-width: 1280px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+        <img class="gallery__item-video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" alt="видео">
     </picture>
       <div class="gallery__figcaption">
         <div class="range-controls"></div>
           <div class="toggle toggle-min"></div>
     </div>
-
+      </div>
     <div class="controls">
     <button class="controls__btn play play--tablet" id="playpause" type="button" data-state="play">Play/Pause
       <!-- <svg class="replay" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="20px" viewBox="0 0 16 20" enable-background="new 0 0 16 20" xml:space="preserve">
