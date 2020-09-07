@@ -8,50 +8,10 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-// const del = require("gulp-del");
+const webp = require("gulp-webp");
+const del = require("del");
 const svgstore = require("gulp-svgstore")
 
-
-//build
-
-const build = () => gulp.series (
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
-);
-
-//start
-
-const start = () => gulp.series (
-  "build",
-  "server"
-);
-
-// Images
-
-const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("source/img"))
-}
-
-
-// WebP
-
-const webpicture = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"))
-}
-
-exports.webp = webpicture;
 
 // Styles
 
@@ -72,7 +32,6 @@ const styles = () => {
 
 exports.styles = styles;
 
-
 // sprite
 
 const sprite = () => {
@@ -84,11 +43,43 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// Images
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("source/img"))
+}
+
+exports.images = images;
+
+
+// WebP
+
+const webpicture = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("source/img"))
+}
+
+exports.webp = webpicture;
+
+
+
+
+
+
 // delete
 
 const clean = () => {
-  return del ("build");
+  return del("build");
 }
+
+exports.del = clean;
 
 
 // Copy
@@ -139,5 +130,23 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-// gulp.task("build", gulp.series("styles, "));
-// gulp.task("start" gulp.series("build, server"));
+//build
+
+const build = () => gulp.series (
+  "del",
+  "copy",
+  "styles",
+  "sprite",
+  // "html"
+);
+
+exports.build = build;
+
+//start
+
+exports.start = () => gulp.series (
+  "build",
+  "server"
+);
+
+// exports.start = start;
