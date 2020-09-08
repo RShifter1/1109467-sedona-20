@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
-var imagemin = require("gulp-imagemin");
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 const svgstore = require("gulp-svgstore")
@@ -26,7 +26,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -38,7 +38,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("source/img"))
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
@@ -89,7 +89,9 @@ const copy = () => {
     "source/fonts/**/*.{woff, woff2}",
     "source/img/*",
     "source/js/*.js",
-    "source/*.ico"
+    "source/*.ico",
+    "source/*.html",
+    "source/css/*"
 
   ], {
     base: "source"
@@ -108,7 +110,7 @@ exports.copy = copy;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -132,21 +134,16 @@ exports.default = gulp.series(
 
 //build
 
-const build = () => gulp.series (
-  "del",
-  "copy",
-  "styles",
-  "sprite",
-  // "html"
-);
 
-exports.build = build;
+
+exports.build = gulp.series (
+ clean, copy, styles, sprite
+ // "html"
+);
 
 //start
 
-exports.start = () => gulp.series (
-  "build",
-  "server"
-);
 
-// exports.start = start;
+exports.start = gulp.series(
+  clean, copy, styles, sprite, server, watcher
+);
