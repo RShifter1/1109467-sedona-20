@@ -35,7 +35,7 @@
   // width: 100px;
   // height: 83px;
   transform: translate(-50%);
-  bottom: -27px;
+  bottom: -29px;
 
   @media (min-width: @tablet-width) {
 
@@ -196,6 +196,20 @@
       @media (min-width: @desktop-width){
       }
 }
+
+.main-nav .site-list__item--active {
+  color: var(--basic-brown);
+
+  &:focus,
+  &:hover {
+    color: var(--basic-brown-hover);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 .close {
   font-size: 0;

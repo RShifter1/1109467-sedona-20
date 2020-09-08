@@ -68,7 +68,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: -27px;
+  bottom: -29px;
 }
 @media (min-width: 768px) {
 }
@@ -193,6 +193,16 @@ body {
   .main-nav .site-list__item:active {
     color: rgba(0, 0, 0, 0.3);
   }
+}
+.main-nav .site-list__item--active {
+  color: var(--basic-brown);
+}
+.main-nav .site-list__item--active:focus,
+.main-nav .site-list__item--active:hover {
+  color: var(--basic-brown-hover);
+}
+.main-nav .site-list__item--active:active {
+  opacity: 0.3;
 }
 .close {
   font-size: 0;
@@ -344,6 +354,14 @@ body {
   font-size: 18px;
   line-height: 26px;
 }
+@media (max-width: 767px) {
+  .intro {
+    background: url(../../img/intro-triangle1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
 @media (min-width: 768px) {
   .intro {
     padding-top: 540px;
@@ -383,21 +401,6 @@ body {
 }
 .reasons {
   position: relative;
-}
-@media (max-width: 767px) {
-  .reason__desc::after {
-    content: "";
-    background: url(../../img/intro-triangle1.svg);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 57px;
-    top: -56px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    right: 0;
-    z-index: -1;
-  }
 }
 .reason {
   display: grid;
@@ -593,10 +596,10 @@ body {
 }
 .features__item--house::before {
   content: url("../../img/icon-house1.svg");
+  width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   display: inline-block;
-  position: absolute;
   top: 20px;
   vertical-align: middle;
 }
@@ -607,17 +610,17 @@ body {
     margin-bottom: 65px;
     position: relative;
     top: 0;
+    width: auto;
   }
 }
 @media (min-width: 1280px) {
 }
 .features__item--food::before {
   content: url("../../img/icon-burger1.svg");
+  width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   display: inline-block;
-  position: absolute;
-  top: 270px;
   vertical-align: middle;
 }
 @media (min-width: 768px) {
@@ -627,6 +630,7 @@ body {
     margin-bottom: 65px;
     position: relative;
     top: 0;
+    width: auto;
   }
 }
 @media (min-width: 1280px) {
@@ -638,27 +642,26 @@ body {
 }
 .features__item--things::before {
   content: url("../../img/icon-gift1.svg");
+  width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   display: inline-block;
-  position: absolute;
-  left: 25px;
-  top: 150px;
+  vertical-align: middle;
 }
 @media (min-width: 768px) {
   .features__item--things::before {
     content: url("../../img/icon-gift-tablet.svg");
     display: block;
     margin-bottom: 65px;
-    position: relative;
     top: 0;
     left: 0;
+    width: auto;
   }
 }
 @media (min-width: 1280px) {
 }
 .features__title {
-  margin-left: 50px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   .features__title {
@@ -720,6 +723,18 @@ body {
 }
 .btn:active {
   background-color: var(--dark-blue);
+}
+.btn--disabled {
+  display: block;
+  background-color: var(--date-of-check-in-focus);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  width: 100%;
+  margin-top: 0;
 }
 .book__description {
   margin-bottom: 25px;
@@ -1282,6 +1297,7 @@ body {
   height: 20px;
   background: url("../../img/icon-video-replay.svg");
   opacity: 1;
+  cursor: pointer;
 }
 .play:hover,
 .play:focus {
@@ -1311,6 +1327,7 @@ body {
   height: 20px;
   background: url("../../img/icon-video-subtitles.svg");
   opacity: 1;
+  cursor: pointer;
 }
 .sub:hover,
 .sub:focus {
@@ -1346,6 +1363,7 @@ body {
     height: 20px;
     background: url("../../img/icon-video-fullscreen.svg");
     opacity: 1;
+    cursor: pointer;
   }
   .fs:hover,
   .fs:focus {
@@ -1363,6 +1381,7 @@ body {
     right: -23px;
     width: 20px;
     height: 20px;
+    cursor: pointer;
   }
 }
 @media (min-width: 1280px) {
@@ -1566,6 +1585,28 @@ body {
     margin-bottom: 23px;
   }
 }
+.reviews__button--disabled {
+  font-family: PT Sans;
+  padding: 15px 30px;
+  background-color: var(--date-of-check-in-focus);
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  outline: none;
+  border: none;
+  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .reviews__button--disabled {
+    width: 50%;
+    margin-top: 60px;
+    margin-bottom: 23px;
+  }
+}
 .form-fieldset {
   width: 100%;
   position: relative;
@@ -1645,7 +1686,7 @@ body {
   width: 100%;
   height: 50px;
   margin-left: 0;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
@@ -1658,7 +1699,7 @@ body {
   width: 23px;
   height: 50px;
   background-color: var(--icon-grey);
-  margin-top: 10px;
+  margin-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1966,7 +2007,7 @@ body {
   color: var(--basic-black);
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .form-fieldset__feedback::placeholder {
   font-family: "PT Sans", Arial, sans-serif;
@@ -1974,7 +2015,7 @@ body {
   color: var(--basic-black);
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .reviews__legend {
   display: none;
@@ -2007,7 +2048,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 55px;
     left: 10px;
   }
 }
@@ -2024,7 +2065,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 65px;
     left: 10px;
   }
 }
@@ -2041,7 +2082,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 10px;
   }
 }
@@ -2058,7 +2099,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 55px;
     right: 10px;
   }
 }
@@ -2075,7 +2116,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 65px;
     right: 10px;
   }
 }
@@ -2092,7 +2133,7 @@ body {
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 30px;
+    top: 40px;
     right: 10px;
   }
 }
@@ -2101,6 +2142,11 @@ body {
     width: 270px;
     top: 40px;
   }
+}
+.modal__map {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
