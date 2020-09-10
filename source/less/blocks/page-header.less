@@ -24,7 +24,7 @@
 
 
 .header__logo {
-  // background-image: url("../../img/logo-sedona-mobile.svg");
+  // background-image: url("../img/logo-sedona-mobile.svg");
   font-size: 0;
   // margin-left: 30px;
   position: absolute;
@@ -43,7 +43,7 @@
   }
 
   @media (min-width: @desktop-width) {
-      // background-image: url("../../img/logo-sedona-desktop.svg");
+      // background-image: url("../img/logo-sedona-desktop.svg");
       width: auto;
       left: 50%;
       height: auto;
@@ -55,7 +55,7 @@
 
 .header__logo img {
   @media (min-width: @desktop-width) {
-      // background-image: url("../../img/logo-sedona-desktop.svg");
+      // background-image: url("../img/logo-sedona-desktop.svg");
       width: auto;
       height: auto;
       background-repeat: no-repeat;
@@ -121,27 +121,38 @@
   outline: none;
 }
 
+.header-item-right {
+  text-align: right;
+}
+
 .main-nav {
   @media (min-width: @tablet-width) {
-    width: 100%;
+    // width: 100%;
     display: grid;
-    // grid-template-columns: minmax(min-content, 0.5) minmax(min-content, 200px) minmax(min-content, 1.5fr) minmax(min-content, 180px);
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-columns: minmax(135px, 0.5fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(149px, 0.5fr);
+    // grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     padding-top: 15px;
     padding-bottom: 15px;
     // margin-right: 15px;
     // margin-left: 15px;
-    place-items: center;
+    // place-items: center;
     grid-gap: 0px;
+    padding-left: 47px;
+    padding-right: 26px;
+    text-align: left;
   }
 
 
 @media (min-width: @desktop-width){
-    display: grid;
-    grid-template-columns: minmax(min-content, 0.5fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 0.5fr);
-    // padding-left: 10px;
-    // padding-right: 10px;
-    // gap: 30px;
+  display: grid;
+grid-template-columns: minmax(min-content, 228px) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 226px);
+  line-height: 26px;
+  color: var(--basic-black);
+  font-weight: bold;
+
+  // margin-left: 90px;
+  padding-left: 90px;
+  padding-right: 72px;
   }
 }
 
@@ -194,6 +205,7 @@
       }
 
       @media (min-width: @desktop-width){
+        // text-align: left;
       }
 }
 
@@ -213,7 +225,7 @@
 
 .close {
   font-size: 0;
-  background: url("../../img/icon-cross1.svg");
+  background: url("../img/icon-cross1.svg");
   height: 22px;
   width: 22px;
   position: absolute;

@@ -13,6 +13,34 @@ const del = require("del");
 const svgstore = require("gulp-svgstore")
 
 
+// delete
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff, woff2}",
+    "source/img/*",
+    "source/js/*.js",
+    "source/*.ico",
+    "source/*.html",
+    "source/css/*"
+
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
 // Styles
 
 const styles = () => {
@@ -64,7 +92,7 @@ const webpicture = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("source/img"))
-}
+};
 
 exports.webp = webpicture;
 
@@ -73,33 +101,7 @@ exports.webp = webpicture;
 
 
 
-// delete
 
-const clean = () => {
-  return del("build");
-}
-
-exports.del = clean;
-
-
-// Copy
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
-    "source/img/*",
-    "source/js/*.js",
-    "source/*.ico",
-    "source/*.html",
-    "source/css/*"
-
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
-};
-
-exports.copy = copy;
 
 
 
@@ -147,6 +149,19 @@ exports.build = gulp.series (
 exports.start = gulp.series(
   clean, copy, styles, sprite, server, watcher
 );
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -156,29 +171,16 @@ exports.start = gulp.series(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // const gulp = require("gulp");
 // const plumber = require("gulp-plumber");
 // const sourcemap = require("gulp-sourcemaps");

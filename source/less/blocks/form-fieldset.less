@@ -157,7 +157,7 @@ font-size: 18px;
 
 
 .form-fieldset--impression {
-  padding-top: 7px;
+  padding-top: 16px;
   @media(min-width: @tablet-width){
   order: -1;
   width: 50%;
@@ -205,8 +205,12 @@ text-align: left;
 
 @media(min-width: @tablet-width){
     width: 100%;
-    padding-top: 10px;
+    padding-top: 30px;
 
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
   }
 
 
@@ -218,7 +222,7 @@ text-align: left;
   // flex-wrap: wrap;
 justify-content: space-between;
 gap: 30px;
-  margin-top: 60px;
+  margin-top: 66px;
 
   }
 }
@@ -272,16 +276,23 @@ gap: 30px;
   white-space: nowrap;
 
   @media(min-width: @tablet-width) {
-    padding-top: 10px;
-    padding-left: 70px;
+    padding-top: 13px;
+    padding-left: 75px;
     padding-right: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 30px;
     // padding-top: 20px;
     // padding: 10px 5px 10px 75px;
   }
-
+  @media(min-width: @desktop-width) {
+  padding-top: 16px;
+    padding-left: 77px;
+    padding-right: 30px;
+    padding-bottom: 7px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 }
 
 
@@ -290,11 +301,13 @@ gap: 30px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 43px;
-	height: 43px;
+	width: 50px;
+	height: 50px;
 	border: 5px solid var(--form-chill);
 	border-radius: 50%;
 	background: var(--form-chill);
+
+
 
 }
 
@@ -313,8 +326,8 @@ gap: 30px;
 .radio + label:after {
 	content: '';
 	position: absolute;
-	top: 15px;
-	left: 16px;
+	top: 20px;
+	left: 20px;
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
@@ -334,7 +347,7 @@ gap: 30px;
 padding-top: 10px;
 
 @media(min-width: @tablet-width) {
-  padding-top: 16px;
+  padding-top: 25px;
 }
 }
 
@@ -412,7 +425,7 @@ line-height: 26px;
 	width: 55px;
 	height: 55px;
 	transition: .2s;
-  background-image: url("../../img/icon-tick.svg");
+  background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     opacity: 0;
 
@@ -460,13 +473,15 @@ margin-top: 28px;
 
 
 .form-fieldset__feedback {
+
+
 font-family: PT Sans;
   padding: 0;
   display: block;
-  min-height: 160px;
+  min-height: 147px;
   width: 100%;
-  // padding-top: 20px;
-  // padding-left: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
   // padding-left: 20px;
   // padding-right: 20px;
   border: none;
@@ -493,6 +508,20 @@ line-height: 26px;
     border: 0px solid var(--date-of-check-in-focus);
     outline: none;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 99%;
+    padding-top: 10px;
+    padding-left: 5px;
+    min-height: 151px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 140px;
+    width: 98%;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
 }
 
 .form-fieldset__feedback::-moz-placeholder {
@@ -508,9 +537,9 @@ line-height: 26px;
 font-family: "PT Sans", Arial, sans-serif;
 font-size: 18px;
 color: var(--basic-black);
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 10px;
+// padding-left: 20px;
+// padding-right: 20px;
+// padding-top: 10px;
 }
 
 
@@ -547,7 +576,7 @@ padding-top: 10px;
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 55px;
+    top: 72px;
     left: 10px;
 
   }
@@ -584,14 +613,14 @@ padding-top: 10px;
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 10px;
 
   }
 
   @media (min-width: @desktop-width) {
     width: 270px;
-    top: 40px;
+    top: 60px;
 
   }
 }
@@ -603,7 +632,7 @@ padding-top: 10px;
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 55px;
+    top: 72px;
     right: 10px;
   }
 
@@ -638,13 +667,13 @@ padding-top: 10px;
     width: 120px;
     background: var(--basic-grey);
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: 10px;
   }
 
   @media (min-width: @desktop-width) {
     width: 270px;
-    top: 40px;
+    top: 60px;
 
   }
 }

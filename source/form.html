@@ -17,11 +17,11 @@
       <!-- <div class= "main-nav__wrapper"> -->
         <a class="site-list__item" href="index.html">Главная</a>
         <a class="site-list__item" href="photo.html">Фото и видео</a>
-        <a class="site-list__item site-list__item--active">Форма отзыва</a>
-        <a class="site-list__item" href="#">html academy</a>
+        <a class="site-list__item site-list__item--active header-item-right">Форма отзыва</a>
+        <a class="site-list__item header-item-right" href="#">html academy</a>
 
     </nav>
-    <button class="close" type="button">Открыть меню</button>
+    <button class="close href="index.html" type="button">Открыть меню</button>
     <a class="header__logo"> logo sedona
       <picture>
         <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
@@ -97,7 +97,7 @@
           <section class="form-fieldset form-fieldset--impression">
             <h2 class="form-fieldset__title form-fieldset__title--impression">ВАше Общее впечатление:</h2>
             <div class="form-field form-field--radio">
-            <input class="radio"  type="radio" id="positive" name="impression" value="positive">
+            <input class="radio"  type="radio" id="positive" name="impression" value="positive" checked>
             <label class="form-field--radio__label" for="positive">Скорее положительное</label>
           </div>
             <div class="form-field form-field--radio">
@@ -114,15 +114,15 @@
             <h2 class="form-fieldset__title form-fieldset__title--sights">посещенные<br> достопримечательности:</h2>
             <div class="sights-wrapper">
             <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge">
+            <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge" checked>
             <label for="bridge">Мост Дьявола</label>
           </div>
             <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="mountain" name="bell-mountain">
+            <input class="checkbox" type="checkbox" id="mountain" name="bell-mountain" checked>
             <label for="mountain">Гора-Колокол</label>
           </div>
           <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="park" name="slide-park">
+            <input class="checkbox" type="checkbox" id="park" name="slide-park" checked>
             <label for="park">Слайд-парк</label>
           </div>
           <div class="form-field form-field--sights">
@@ -142,6 +142,20 @@
       </small>
         </form>
         </section>
+
+        <section class="pop-up pop-up--fail">
+          <h2 class="pop-up__title">Что-то пошло не так!</h2>
+          <p class="pop-up__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="pop-up__button--fail" type="button">ок</button>
+        </section>
+        <section class="pop-up pop-up--succes">
+          <h2 class="pop-up__title">Ваш отзыв отправлен!</h2>
+          <p class="pop-up__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <div class="button__wrapper">
+            <button class="pop-up__button--success" type="button">Закрыть окно</button>
+          </div>
+        </section>
+
 </main>
         <footer class="page-footer">
             <a class="instagram" href="#">#VISITSEDONA</a>

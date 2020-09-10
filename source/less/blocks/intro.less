@@ -1,8 +1,8 @@
 //
 // .main::before {
-//   content: url("../../img/bg-back-mobile.jpg");
-//   // content: url("../../img/text-sedona.svg");
-//   // background-image: url("../../img/bg-back-mobile.jpg");
+//   content: url("../img/bg-back-mobile.jpg");
+//   // content: url("../img/text-sedona.svg");
+//   // background-image: url("../img/bg-back-mobile.jpg");
 //   position: relative;
 //   // bottom: 0px;
 //
@@ -17,11 +17,11 @@
 }
 .intro::before {
   content: "";
-  background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-mobile.jpg");
-  background-size: 300px, cover, 100px;
+  background: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile.jpg");
+  background-size: 280px, cover;
   width: 100%;
-  height: 380px;
-  position:absolute;
+  height: 388px;
+  position: absolute;
   background-repeat: no-repeat;
   top: 0px;
   left: 0;
@@ -29,30 +29,31 @@
   background-position: center, center;
 
   @media (min-resolution: 2dppx) {
-      background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-mobile@2x.jpg");
-      background-size: 300px, cover, 100px;
+      background: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@2x.jpg");
+      background-size: 280px, cover;
       width: 100%;
-      height: 380px;
-      position:absolute;
+      height: 388px;
+      position: absolute;
       background-repeat: no-repeat;
       top: 0px;
       left: 0;
       z-index: -1;
       background-position: center, center;
     }
+
   // bottom: 300px;
 
   @media (min-width: @tablet-width) {
-    background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-tablet@1x.jpg");
-    height: 520px;
+    background: url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
+    height: 517px;
     background-size: 480px, cover;
     // top: 10px;
     background-position: center, center;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-        background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-tablet@2x.jpg");
-        height: 520px;
+        background: url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@2x.jpg");
+        height: 517px;
         background-size: 480px, cover;
         // top: 10px;
         background-position: center, center;
@@ -61,12 +62,21 @@
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../../img/text-sedona-index.svg"), url("../../img/bg-back-desktop@1x.jpg");
-    height: 520px;
+    background: url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
+    height: 517px;
     background-size: 490px, cover;
     // top: 10px;
     background-position: center, center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+        background: url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
+        height: 517px;
+        background-size: 490px, cover;
+        // top: 10px;
+        background-position: center, center;
+        background-repeat: no-repeat;
+      }
   }
 
 }
@@ -74,44 +84,46 @@
 .intro::after {
   content: "";
   background-repeat: no-repeat;
-  background: url("../../img/bg-intro-triangle-mobile.svg");
+  background: url("../img/bg-intro-triangle-mobile.svg");
   width: 100%;
   height: 57px;
   position: absolute;
   background-size: contain;
   // bottom: 100px;
   left: 0;
-  top: 355px;
+  top: 362px;
   // outline: 5px solid red;
 
   @media (min-width: @tablet-width) {
-background: url("../../img/bg-intro-triangle-tablet.svg");
-top: 465px;
+background: url("../img/bg-intro-triangle-tablet.svg");
+top: 460px;
 background-repeat: no-repeat;
 background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../../img/bg-intro-triangle-desktop.svg");
+    background: url("../img/bg-intro-triangle-desktop.svg");
+    top: 461px;
 
   }
 }
 
 .intro {
+  position: relative;
   // outline: 5px solid red;
   text-align: center;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 396px;
-  padding-bottom: 35px;
+  padding-top: 400px;
+  padding-bottom: 44px;
   // margin-bottom: 35px;
   font-size: 18px;
 line-height: 26px;
 
 
   @media (max-width: @mobile-width-only) {
-    // display: block;
-    background: url(../../img/intro-triangle1.svg);
+
+    background: url(../img/intro-triangle1.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -133,7 +145,6 @@ line-height: 26px;
 }
 
 .intro__title {
-  //
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -149,7 +160,6 @@ line-height: 26px;
   font-size: 14px;
   line-height: 26px;
   @media (min-width: @tablet-width) {
-    // outline: 5px solid black;
     white-space: nowrap;
 
   }

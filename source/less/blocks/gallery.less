@@ -19,7 +19,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 18px;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
   border-top: 1px solid var(--date-of-check-in-focus);
   text-align: center;
   margin: 0;
@@ -51,6 +51,7 @@
 
 .gallery__photo {
   width: 100%;
+  // height: 100%;
   display: block;
 
 
@@ -58,11 +59,37 @@
 }
 
 .gallery__photo--desktop {
-  height: 400px;
+  max-height: 400px;
 
 }
 
+.like__wrapper {
+  display: flex;
+}
 
+.like__amount {
+  display: inline-block;
+  font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+margin: 0 auto;
+margin-left: 15px;
+
+@media (min-width: @tablet-width) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+
+}
+
+  @media (min-width: @desktop-width) {
+    color: white;
+    margin-bottom: 30px;
+  }
+}
 .like {
   display: flex;
 
@@ -113,11 +140,12 @@ bottom: 35px;
   font-size: 14px;
   line-height: 24px;
   text-align: left;
-  margin-top: 6px;
+  margin-top: 10px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     margin-left: 22px;
+    // margin-top: 15px;
   }
 
   @media (min-width: @desktop-width) {
@@ -126,6 +154,8 @@ bottom: 35px;
     margin-top: 17px;
   }
 }
+
+
 
 .gallery__item-author {
   text-transform: capitalize;
@@ -181,7 +211,7 @@ bottom: 35px;
 .gallery__item--video-block {
   background-color: var(--date-of-check-in-focus);
   text-align: center;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   padding-top: 15px;
 
   @media (min-width: @tablet-width) {
@@ -192,7 +222,7 @@ bottom: 35px;
   @media (min-width: @desktop-width) {
     padding-left: 200px;
     padding-right: 200px;
-    padding-top: 24px;
+    padding-top: 30px;
   }
 }
 
@@ -223,7 +253,7 @@ bottom: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 42px;
+    padding-bottom: 80px;
   }
 }
 
@@ -275,7 +305,7 @@ margin-bottom: 0;
 
 // .toggle::before {
 //   @media (min-width: @tablet-width) {
-//     content: url("../../img/replay-tablet.svg");
+//     content: url("../img/replay-tablet.svg");
 //     position: absolute;
 //     // background-color: white;
 //     right: 50px;
@@ -294,7 +324,7 @@ margin-bottom: 0;
 //     // outline: 5px solid red;
 //
 //     @media (min-width: @desktop-width) {
-//       content: url("../../img/subtitles-tablet.svg");
+//       content: url("../img/subtitles-tablet.svg");
 //       // outline: 5px solid red;
 //       left: 600px;
 //
@@ -306,7 +336,7 @@ margin-bottom: 0;
 
 // .gallery__figcaption::after {
 //   @media(min-width: @tablet-width) {
-//     content: url("../../img/fullscreen-tablet.svg");
+//     content: url("../img/fullscreen-tablet.svg");
 //     position: absolute;
 //     // background-color: white;
 //     opacity: 1;
@@ -380,7 +410,7 @@ left: 58px;
   margin-left: 25px;
   width: 16px;
   height: 20px;
-  background: url("../../img/icon-video-replay.svg");
+  background: url("../img/icon-video-replay.svg");
   opacity: 1;
 
   cursor: pointer;
@@ -396,7 +426,7 @@ left: 58px;
 
 .play--tablet {
   @media (min-width: @tablet-width) {
-    background: url("../../img/replay-tablet.svg");
+    background: url("../img/replay-tablet.svg");
     position: absolute;
     // outline: 5px solid red;
     bottom: 37px;
@@ -422,7 +452,7 @@ left: 58px;
   margin-left: 100px;
   width: 32px;
   height: 20px;
-  background: url("../../img/icon-video-subtitles.svg");
+  background: url("../img/icon-video-subtitles.svg");
   opacity: 1;
   cursor: pointer;
 
@@ -437,7 +467,7 @@ left: 58px;
 }
 .sub--tablet {
   @media (min-width: @tablet-width) {
-    background: url("../../img/subtitles-tablet.svg");
+    background: url("../img/subtitles-tablet.svg");
     position: absolute;
     // outline: 5px solid red;
     bottom: 37px;
@@ -465,7 +495,7 @@ left: 58px;
   margin-right: 20px;
   width: 20px;
   height: 20px;
-  background: url("../../img/icon-video-fullscreen.svg");
+  background: url("../img/icon-video-fullscreen.svg");
   opacity: 1;
   cursor: pointer;
 
@@ -484,7 +514,7 @@ left: 58px;
 
 .fs--tablet {
   @media (min-width: @tablet-width) {
-    background:  url("../../img/fullscreen-tablet.svg");
+    background:  url("../img/fullscreen-tablet.svg");
     position: absolute;
     // outline: 5px solid red;
     bottom: 37px;
