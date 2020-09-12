@@ -12,16 +12,13 @@
 
 <body>
   <div class="container">
-  <header class="page-header">
+  <header class="header">
     <nav class="main-nav main-nav--opened main-nav--nojs">
-      <!-- <div class= "main-nav__wrapper"> -->
-        <a class="site-list__item" href="index.html">Главная</a>
-        <a class="site-list__item" href="photo.html">Фото и видео</a>
-        <a class="site-list__item site-list__item--active header-item-right">Форма отзыва</a>
-        <a class="site-list__item header-item-right" href="#">html academy</a>
-
+        <a class="main-nav__item" href="index.html">Главная</a>
+        <a class="main-nav__item" href="photo.html">Фото и видео</a>
+        <a class="main-nav__item main-nav__item--active main-nav__item--right">Форма отзыва</a>
+        <a class="main-nav__item main-nav__item--right" href="#">html academy</a>
     </nav>
-    <button class="close href="index.html" type="button">Открыть меню</button>
     <a class="header__logo"> logo sedona
       <picture>
         <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
@@ -29,62 +26,56 @@
         <img src="img/logo-sedona-mobile.svg" alt="логотип Седоны">
    </picture>
         </a>
-    <div class="header__wrapper header__wrapper--index">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="header__close" type="button">закрыть меню</button>
+    <div class="header__wrapper">
+    <button class="header__toggle" type="button">Открыть меню</button>
   </div>
   </header>
 
 
     <main class="main">
-      <!-- <section class="main-image">
-        <h1 class="visually-hidden">Баннер</h1>
-      </section> -->
 
-      <section class="reviews__header">
-          <b class="reviews__header-title">Оставьте свой отзыв</b>
-          <p class="reviews__header-intro">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-
+      <section class="reviews-header">
+          <b class="reviews-header__title">Оставьте свой отзыв</b>
+          <p class="reviews-header__intro">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
         <section class="reviews">
-
-
           <form class="form" action="https://echo.htmlacademy.ru" method="get">
-          <section class="form-fieldset form-fieldset--introduce">
-            <h2 class="form-fieldset__title form-fieldset__title--introduce">Представьтесь:</h2>
-            <div class="form-field form-field--name">
-              <label class="form-field__label" for="first-name">имя*:</label>
-            <input class="form-field__input" type="text" id="first-name" name="first-names" placeholder="Петр" required>
+          <section class="form__fieldset form__fieldset--introduce">
+            <h2 class="form__title form__title--introduce">Представьтесь:</h2>
+            <div class="form__field form__field--name">
+              <label class="form__label" for="first-name">имя*:</label>
+            <input class="form__input" type="text" id="first-name" name="first-names" placeholder="Петр" required>
           </div>
-          <div class="form-field form-field--name">
-            <label class="form-field__label" for="second-name">Фамилия*:</label>
-            <input class="form-field__input" type="text" id="second-name" name="second-names" placeholder="Иванов" required>
+          <div class="form__field form__field--name">
+            <label class="form__label" for="second-name">Фамилия*:</label>
+            <input class="form__input" type="text" id="second-name" name="second-names" placeholder="Иванов" required>
           </div>
-          <div class="form-field form-field--name">
-            <label class="form-field__label" for="middle-name">отчество:</label>
-            <input class="form-field__input" type="text" id="middle-name" name="middle-names" placeholder="Александрович" required>
+          <div class="form__field form__field--name">
+            <label class="form__label" for="middle-name">отчество:</label>
+            <input class="form__input" type="text" id="middle-name" name="middle-names" placeholder="Александрович" required>
           </div>
           </section>
 
 
-
-          <section class="form-fieldset form-fieldset--contacts">
-            <h2 class="form-fieldset__title form-fieldset__title--contacts">Контактная информация:</h2>
-            <div class="contacts__wrapper">
-            <div class="form-field--contacts">
-            <label class="form-field__label form-field__label--contacts" for="telephone">Контактный телефон*:</label>
-            <div class="input-icon">
-            <input class="form-field__input form-field__input--contacts" type="tel" id="telephone" name="phone" placeholder="Введите телефон" required>
-            <svg class="form-field__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <section class="form__fieldset form__fieldset--contacts">
+            <h2 class="form__title form__title--contacts">Контактная информация:</h2>
+            <div class="form__wrapper form__wrapper--contacts">
+            <div class="form__field form__field--contacts">
+            <label class="form__label form__label--contacts" for="telephone">Контактный телефон*:</label>
+            <div class="form__icon-wrapper">
+            <input class="form__input form__input--contacts" type="tel" id="telephone" name="phone" placeholder="Введите телефон" required>
+            <svg class="form__icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4L12.4 12.2C12.7 11.9 13.1 11.8 13.4 12C14.5 12.4 15.7 12.6 17 12.6C17.6 12.6 18 13 18 13.6V17C18 17.6 17.6 18 17 18C7.6 18 0 10.4 0 1C0 0.4 0.4 0 1 0H4.5C5.1 0 5.5 0.4 5.5 1C5.5 2.2 5.7 3.4 6.1 4.6C6.2 4.9 6.1 5.3 5.9 5.6L3.6 7.8Z" fill="#010101"/>
             </svg>
 
           </div>
           </div>
-            <div class="form-field--contacts">
-            <label class="form-field__label form-field__label--contacts" for="email">Электронная почта*:</label>
-            <div class="input-icon">
-            <input class="form-field__input form-field__input--contacts" type="email" id="email" name="e-mail" placeholder="Введите e-mail" required>
-            <svg  class="form-field__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+            <div class="form__field form__field--contacts">
+            <label class="form__label form__label--contacts" for="email">Электронная почта*:</label>
+            <div class="form__icon-wrapper">
+            <input class="form__input form__input--contacts" type="email" id="email" name="e-mail" placeholder="Введите e-mail" required>
+            <svg  class="form__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
               <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
             </svg>
           </div>
@@ -94,50 +85,50 @@
         </section>
 
 
-          <section class="form-fieldset form-fieldset--impression">
-            <h2 class="form-fieldset__title form-fieldset__title--impression">ВАше Общее впечатление:</h2>
-            <div class="form-field form-field--radio">
-            <input class="radio"  type="radio" id="positive" name="impression" value="positive" checked>
-            <label class="form-field--radio__label" for="positive">Скорее положительное</label>
+          <section class="form__fieldset form__fieldset--impression">
+            <h2 class="form__title form__title--impression">ВАше Общее впечатление:</h2>
+            <div class="form__field form__field--radio">
+            <input class="form__radio-button"  type="radio" id="positive" name="impression" value="positive" checked>
+            <label class="form__label form__label--radio" for="positive">Скорее положительное</label>
           </div>
-            <div class="form-field form-field--radio">
-            <input  class="radio" type="radio" id="negative" name="impression" value="negative">
-            <label class="form-field--radio__label" for="negative">Скорее отрицательное</label>
+            <div class="form__field form__field--radio">
+            <input  class="form__radio-button" type="radio" id="negative" name="impression" value="negative">
+            <label class="form__label form__label--radio" for="negative">Скорее отрицательное</label>
           </div>
-          <div class="form-field form-field--radio">
-            <input class="radio"  type="radio" id="idk" name="impression" value="idk">
-            <label class="form-field--radio__label" for="idk">Затрудняюсь ответить</label>
+          <div class="form__field form__field--radio">
+            <input class="form__radio-button"  type="radio" id="idk" name="impression" value="idk">
+            <label class="form__label form__label--radio" for="idk">Затрудняюсь ответить</label>
           </div>
           </section>
 
-          <section class="form-fieldset form-fieldset--sights">
-            <h2 class="form-fieldset__title form-fieldset__title--sights">посещенные<br> достопримечательности:</h2>
-            <div class="sights-wrapper">
-            <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="bridge" name="Devil's-bridge" checked>
+          <section class="form__fieldset form__fieldset--sights">
+            <h2 class="form__title form__title--sights">посещенные<br> достопримечательности:</h2>
+            <div class="form__wrapper form__wrapper--sights">
+            <div class="form__field form__field--sights">
+            <input class="form__checkbox" type="checkbox" id="bridge" name="Devil's-bridge" checked>
             <label for="bridge">Мост Дьявола</label>
           </div>
-            <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="mountain" name="bell-mountain" checked>
+            <div class="form__field form__field--sights">
+            <input class="form__checkbox" type="checkbox" id="mountain" name="bell-mountain" checked>
             <label for="mountain">Гора-Колокол</label>
           </div>
-          <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="park" name="slide-park" checked>
+          <div class="form__field form__field--sights">
+            <input class="form__checkbox" type="checkbox" id="park" name="slide-park" checked>
             <label for="park">Слайд-парк</label>
           </div>
-          <div class="form-field form-field--sights">
-            <input class="checkbox" type="checkbox" id="rocks" name="red-rocks">
+          <div class="form__field form__field--sights">
+            <input class="form__checkbox" type="checkbox" id="rocks" name="red-rocks">
             <label for="rocks">Красные скалы</label>
           </div>
         </div>
           </section>
 
-            <section class="form-fieldset form-fieldset--text">
-          <h2 class="form-fieldset__title form-fieldset__title--text">Опишите свои эмоции:</h2>
-            <textarea class="form-fieldset__feedback" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
+            <section class="form__fieldset form__fieldset--text">
+          <h2 class="form__title form__title--text">Опишите свои эмоции:</h2>
+            <textarea class="form__feedback" id="review" name="text-of-review" placeholder="Опишите подробно все свои восторги"></textarea>
           </section>
-          <button class="reviews__button button" type="submit">отправить отзыв</button>
-          <small class="reviews__legend">
+          <button class="form__button button" type="submit">отправить отзыв</button>
+          <small class="form__legend">
         * — обязательные поля
       </small>
         </form>
@@ -146,53 +137,57 @@
         <section class="pop-up pop-up--fail">
           <h2 class="pop-up__title">Что-то пошло не так!</h2>
           <p class="pop-up__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          <button class="pop-up__button--fail" type="button">ок</button>
+          <button class="pop-up__button pop-up__button--fail" type="button">ок</button>
         </section>
         <section class="pop-up pop-up--succes">
           <h2 class="pop-up__title">Ваш отзыв отправлен!</h2>
           <p class="pop-up__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-          <div class="button__wrapper">
-            <button class="pop-up__button--success" type="button">Закрыть окно</button>
+          <div class="pop-up__button-wrapper">
+            <button class="pop-up__button pop-up__button--success" type="button">Закрыть окно</button>
           </div>
         </section>
 
 </main>
-        <footer class="page-footer">
-            <a class="instagram" href="#">#VISITSEDONA</a>
-          <div class="footer-social">
-                <a class="social-button" href="#">twitter
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                    <g id="W6EeEF_1_">
-                      <g>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
-                      </g>
-                    </g>
-                  </svg>
-                </a>
-                <a class="social-button" href="#">facebook
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-                    <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
-                  </svg>
-                </a>
-                <a class="social-button" href="#">YouTube
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-                    <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
-                  </svg>
-                </a>
-          </div>
-          <div class="copyright">
-              <p class="copyright__description">Разработано </p>
-              <a href="https://htmlacademy.ru/intensive/htmlcss">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-                  <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
-                </svg>
-           HTML Academy
-              </a>
-          </div>
+<footer class="footer">
+    <a class="footer__instagram" href="#">#VISITSEDONA</a>
+  <div class="footer__social">
+        <a class="footer__social-button" href="#">twitter
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+            <g id="W6EeEF_1_">
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a class="footer__social-button" href="#">facebook
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+            <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+          </svg>
+        </a>
+        <a class="footer__social-button" href="#">YouTube
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+            <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+          </svg>
+        </a>
+  </div>
+<div class="footer__copyright">
+    <p class="copyright__description">Разработано </p>
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+        <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+      </svg>
 
-
-        </footer>
+ HTML Academy
+    </a>
 </div>
-        </body>
 
-        </html>
+
+</footer>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+
+
+
+
+
+.header {
+  position: relative;
+ background-color: var(--basic-white);
+}
+
+
+
+.header__wrapper {
+  position: relative;
+  // outline: 5px solid red;
+  padding-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    // padding: 0;
+    position: absolute;
+
+  }
+  }
+
+
+
+.header__logo {
+  // background-image: url("../img/logo-sedona-mobile.svg");
+  font-size: 0;
+  // margin-left: 30px;
+  position: absolute;
+  left: 50%;
+  // left: 0;
+// outline: 5px solid red;
+  // top: 0px;
+  // width: 100px;
+  // height: 83px;
+  transform: translate(-50%);
+  bottom: -28px;
+
+  @media (min-width: @tablet-width) {
+
+      // left: 500%;
+  }
+
+  @media (min-width: @desktop-width) {
+      // background-image: url("../img/logo-sedona-desktop.svg");
+      width: auto;
+      left: 50%;
+      height: auto;
+      background-repeat: no-repeat;
+      bottom: -40px;
+
+  }
+}
+
+.header__logo img {
+  @media (min-width: @desktop-width) {
+      // background-image: url("../img/logo-sedona-desktop.svg");
+      width: auto;
+      height: auto;
+      background-repeat: no-repeat;
+
+
+  }
+}
+
+
+
+.header__toggle {
+  position: absolute;
+  top: 33px;
+  right: 1px;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  font-size: 0;
+  fill: var(--basic-blue);
+  // outline: 5px solid red;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+
+.header__toggle::before {
+  content: "";
+  position: absolute;
+  bottom: 62px;
+  right: 18px;
+  width: 23px;
+  height: 4px;
+  background-color: var(--basic-blue);
+  box-shadow: 0 8px 0 0 var(--basic-blue), 0 16px 0 0 var(--basic-blue);
+
+
+}
+
+.header__toggle:hover::before,
+.header__toggle:focus::before {
+  opacity: 0.6;
+  outline: none;
+}
+
+.header__toggle:active::before {
+  opacity: 0.3;
+  outline: none;
+}
+
+
+
+
+.header__close {
+  font-size: 0;
+  background: url("../img/icon-cross1.svg");
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  padding: 0;
+  outline: none;
+  // outline: 5px solid red;
+  border: none;
+  cursor: pointer;
+  display: none;
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media(min-width: @tablet-width) {
+    display: none;
+  }
+}

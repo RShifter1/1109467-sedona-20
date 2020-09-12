@@ -26,7 +26,7 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
+    "source/fonts/**/*",
     "source/img/*",
     "source/js/*.js",
     "source/*.ico",
@@ -80,7 +80,7 @@ const images = () => {
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("source/img"))
+  .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -91,7 +91,7 @@ exports.images = images;
 const webpicture = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"))
+  .pipe(gulp.dest("build/img"))
 };
 
 exports.webp = webpicture;
@@ -150,7 +150,7 @@ exports.start = gulp.series(
   clean, copy, styles, sprite, server, watcher
 );
 //
-//
+
 //
 //
 //
@@ -177,9 +177,9 @@ exports.start = gulp.series(
 //
 //
 //
-//
-//
-//
+
+
+
 //
 // const gulp = require("gulp");
 // const plumber = require("gulp-plumber");
