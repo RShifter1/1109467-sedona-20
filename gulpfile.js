@@ -149,22 +149,18 @@ exports.build = gulp.series (
 exports.start = gulp.series(
   clean, copy, styles, sprite, server, watcher
 );
-//
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 //
 //
 
 
-
+//
+//
+//
+//
+//
+//
 
 
 
@@ -177,9 +173,13 @@ exports.start = gulp.series(
 //
 //
 //
-
-
-
+//
+//
+//
+//
+//
+//
+//
 //
 // const gulp = require("gulp");
 // const plumber = require("gulp-plumber");

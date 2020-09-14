@@ -4,97 +4,78 @@
 // }
 .intro::before {
   content: "";
-  background: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile.jpg");
-  background-size: 280px, cover;
+  background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-size: 280px, 100%, cover;
   width: 100%;
-  height: 392px;
+  height: 390px;
   position: absolute;
   background-repeat: no-repeat;
   top: 0px;
   left: 0;
   z-index: -1;
-  background-position: center, center;
+  background-position: center, bottom, center;
+  background-color: blue;
 
   @media (min-resolution: 2dppx) {
-      background: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@2x.jpg");
-      background-size: 280px, cover;
+      background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+      background-size: 280px, contain, cover;
       width: 100%;
-      height: 394px;
+      height: 390px;
       position: absolute;
       background-repeat: no-repeat;
       top: 0px;
       left: 0;
       z-index: -1;
-      background-position: center, center;
+      background-position: center, bottom, center;
+      background-color: blue;
     }
 
   // bottom: 300px;
 
   @media (min-width: @tablet-width) {
-    background: url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
+    display: block;
+    background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
     height: 517px;
-    background-size: 480px, cover;
+    background-size: 460px, 100%, cover;
     // top: 10px;
-    background-position: center, center;
+    background-position: center 76px, bottom, center;
     background-repeat: no-repeat;
+    background-color: blue;
 
     @media (min-resolution: 2dppx) {
-        background: url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@2x.jpg");
+        background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
         height: 517px;
-        background-size: 480px, cover;
+        background-size: 460px, 100%, cover;
         // top: 10px;
-        background-position: center, center;
+        background-position: center 76px, bottom, center;
         background-repeat: no-repeat;
+        background-color: blue;
       }
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
     height: 517px;
-    background-size: 490px, cover;
+    background-size: 460px, 100%, cover;
     // top: 10px;
-    background-position: center, center;
+    background-position: center 76px, bottom, center;
     background-repeat: no-repeat;
+    background-color: blue;
 
     @media (min-resolution: 2dppx) {
-        background: url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
+        background: url("../img/text-sedona-index.svg"),url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
         height: 517px;
-        background-size: 490px, cover;
+        background-size: 460px, 100%, cover;
         // top: 10px;
-        background-position: center, center;
+        background-position: center 76px, bottom, center;
         background-repeat: no-repeat;
+        background-color: blue;
       }
   }
 
 }
 
-.intro::after {
-  content: "";
-  background-repeat: no-repeat;
-  background: url("../img/bg-intro-triangle-mobile.svg");
-  width: 100%;
-  height: 57px;
-  position: absolute;
-  background-size: contain;
-  // bottom: 100px;
-  background-repeat: no-repeat;
-  left: 0;
-  top: 368px;
-  // outline: 5px solid red;
 
-  @media (min-width: @tablet-width) {
-background: url("../img/bg-intro-triangle-tablet.svg");
-top: 460px;
-background-repeat: no-repeat;
-background-size: cover;
-  }
-
-  @media (min-width: @desktop-width) {
-    background: url("../img/bg-intro-triangle-desktop.svg");
-    top: 461px;
-
-  }
-}
 
 .intro {
   position: relative;
@@ -110,7 +91,6 @@ line-height: 26px;
 
 
   @media (max-width: @mobile-width-only) {
-
     background: url(../img/intro-triangle1.svg);
     background-size: cover;
     background-repeat: no-repeat;
